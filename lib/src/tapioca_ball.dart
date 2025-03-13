@@ -1,6 +1,7 @@
 import "dart:typed_data";
 import "dart:ui";
 
+import "package:flutter/material.dart";
 import "package:tapioca_v2/src/util.dart";
 
 /// TapiocaBall is a effect to apply to the video.
@@ -17,7 +18,7 @@ abstract class TapiocaBall {
 
   /// Creates a object to overlay text.
   static TapiocaBall textOverlay(
-      String text, int x, int y, int size, Color color) {
+      Widget text, int x, int y, int size, Color color) {
     return _TextOverlay(text: text, x: x, y: y, size: size, color: color);
   }
 
@@ -67,7 +68,7 @@ class _Filter extends TapiocaBall {
 }
 
 class _TextOverlay extends TapiocaBall {
-  final String text;
+  final Widget text;
   final int x;
   final int y;
   final int size;
