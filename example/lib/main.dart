@@ -100,7 +100,7 @@ class _MyAppState extends State<MyApp> {
                         final tapiocaBalls = [
                           TapiocaBall.filter(Filters.pink, 0.2),
                           TapiocaBall.textOverlay(
-                              Text('text'), 100, 10, 100, const Color(0xffffc0cb)),
+                              "text", 100, 10, 100, const Color(0xffffc0cb),),
                         ];
                         print("will start");
                         final cup = Cup(Content(_video.path), tapiocaBalls);
